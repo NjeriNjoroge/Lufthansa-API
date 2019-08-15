@@ -15,7 +15,6 @@ let grant_type = "client_credentials"
 
 enum AuthService {
   case getToken
-  case getFlight(origin: String, destination: String)
 }
 
 extension AuthService: TargetType {
@@ -27,9 +26,6 @@ extension AuthService: TargetType {
     switch self {
     case .getToken:
       return "oauth/token"
-    case .getFlight(let origin, let dest):
-      return "cargo/getRoute/\(origin)-\(dest)/29-08-15/YNZ"
-
     }
   }
   
@@ -57,8 +53,6 @@ extension AuthService: TargetType {
     switch self {
     case .getToken:
       return ["Content-Type": "application/x-www-form-urlencoded"]
-    case .getFlight:
-      return ["Content-Type": "application/json", "Authorization": "Bearer smayeuv7hgmd73nbx85pyt3w"]
     }
   }
   
@@ -67,7 +61,7 @@ extension AuthService: TargetType {
   var task: Task {
     switch self {
     case .getToken:
-      let params = ["client_id": "\(client_id)", "client_secret": "\(client_secret)", "grant_type": "client_credentials"]
+      let params = ["client_id": "\(client_id)", "client_secret": "\(client_secret)", "grant_type": "\(grant_type)"]
       return .requestParameters(parameters: params, encoding: URLEncoding.default)
     default:
       return .requestPlain

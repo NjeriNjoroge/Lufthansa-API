@@ -30,54 +30,60 @@ public class WebServices {
     return defaultEndpoint
   }
   
-  fileprivate static func getToken(completionHandler: @escaping (JSON?, Error?) -> Void) {
+  public static func loginUser(completion: @escaping (JSON?) -> Void) {
+    getToken(completionHandler: completion)
+  }
+  
+   fileprivate static func getToken(completionHandler: @escaping (JSON?) -> Void) {
     
     let provider = MoyaProvider<AuthService>(endpointClosure: loginEndpointClosure, manager: DefaultAlamofireManager.sharedManager)
     provider.request(.getToken) { (result) in
       switch result {
       case let .success(moyaResponse):
         do {
+          let statuscode = moyaResponse.statusCode
+          print("statuscode catalog \(statuscode)")
           let data = try moyaResponse.mapJSON()
           let json = JSON(data)
+          completionHandler(json)
           // get token
-          guard let jsonDict = json.dictionary, let token = jsonDict["access_token"]?.stringValue else {return}
-          UserDataService.shared.token = token
+          guard let jsonDict = json.dictionaryObject else {return}
+          let token = jsonDict["access_token"]
+          UserDefaults.standard.set(token, forKey: "AuthToken") //saving to user defaults
         } catch {
-          let json = JSON("")
-          completionHandler(json, error)
+          
         }
         
       case let .failure(error):
-        let json = JSON(error)
-        completionHandler(json, error)
-        print(json)
+        print("error token \(error)")
+        break
       }
     }
   }
   
-//  static func getFlightSchedule(origin: String, dest: String, completion: @escaping _completion) {
-//    let provider = MoyaProvider<AuthService>(endpointClosure: defaultEndpoint, manager: DefaultAlamofireManager.sharedManager)
-//    provider.request(.getFlight(origin: origin, destination: dest)) { (result) in
-//      switch result {
-//      case let .success(moyaResponse):
-//        do {
-//          let data = try moyaResponse.mapJSON()
-//          let json = JSON(data)
-//          
-//          debugPrint("getFlightSchedule: \(json)")
-//          
-//        } catch {
-//          let json = JSON("")
-//          //completionHandler(json)
-//        }
-//        
-//      case let .failure(error):
-//        let json = JSON(error)
-//        //completionHandler(json)
-//        print(json)
-//      }
-//    }
-//  }
+  static func getFlightSchedule(origin: String, dest: String, completion: @escaping _completion) {
+    let provider = MoyaProvider<AuthService>(endpointClosure: loginEndpointClosure, manager: DefaultAlamofireManager.sharedManager)
+    provider.request(.getFlight(origin: origin, destination: dest)) { (result) in
+      switch result {
+      case let .success(moyaResponse):
+        do {
+          let data = try moyaResponse.mapJSON()
+          let json = JSON(data)
+          
+          debugPrint("getFlightSchedule: \(json)")
+          
+        } catch {
+          let json = JSON("")
+          //completionHandler(json)
+        }
+        
+      case let .failure(error):
+        let json = JSON(error)
+        //completionHandler(json)
+        print(json)
+      }
+    }
+  }
   
   
 }

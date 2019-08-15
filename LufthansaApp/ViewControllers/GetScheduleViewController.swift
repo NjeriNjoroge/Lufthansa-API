@@ -105,14 +105,9 @@ class GetScheduleViewController: UIViewController {
   }
 
   @objc fileprivate func getToken() {
-    //do network call
-//    WebServices.getFlightSchedule(origin: "FRA", dest: "HKG") { (json, error, isValidSession) in
-//      print(json)
-//    }
-    WebServices.getToken { (json) in
-      print("Token: \(json)")
-    }
-      print(UserDataService.shared.token)
+    //dont need to do anything here we just need the token
+    WebServices.loginUser { (json) in }
+    print("*****\(UserDefaults.standard.string(forKey: "AuthToken"))")
     }
 
 }
