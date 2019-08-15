@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "LufthansaApp/Networking/WebServices.swift"
+            timestampString = "587551674.253839"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "unknown"
+            landmarkType = "0">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in static LufthansaApp.WebServices.getToken(completionHandler: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "LufthansaApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gracenjoroge/Desktop/LufthansaApp/LufthansaApp/Networking/WebServices.swift"
+                  timestampString = "587551674.260618"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "1528">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in static LufthansaApp.WebServices.getToken(completionHandler: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "LufthansaApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gracenjoroge/Desktop/LufthansaApp/LufthansaApp/Networking/WebServices.swift"
+                  timestampString = "587551674.263642"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "2341">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Result.Result&lt;Moya.Response, Moya.MoyaError&gt;) -&gt; () in static LufthansaApp.WebServices.getToken(completionHandler: (SwiftyJSON.JSON) -&gt; ()) -&gt; ()"
+                  moduleName = "LufthansaApp"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/gracenjoroge/Desktop/LufthansaApp/LufthansaApp/Networking/WebServices.swift"
+                  timestampString = "587551674.266804"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "45"
+                  endingLineNumber = "45"
+                  offsetFromSymbolStart = "2543">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

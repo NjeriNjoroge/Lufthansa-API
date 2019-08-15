@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87BE703C22F979EA0015157C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE703B22F979EA0015157C /* AppDelegate.swift */; };
+		87BE704322F979EC0015157C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BE704222F979EC0015157C /* Assets.xcassets */; };
+		87BE704622F979EC0015157C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BE704422F979EC0015157C /* LaunchScreen.storyboard */; };
+		87BE704F22F986130015157C /* GetScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE704E22F986130015157C /* GetScheduleViewController.swift */; };
+		87BE705322F9A1210015157C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE705222F9A1210015157C /* AuthService.swift */; };
+		87BE705522F9A8310015157C /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE705422F9A8310015157C /* WebServices.swift */; };
+		87BE705722F9A9F10015157C /* DefaultAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE705622F9A9F10015157C /* DefaultAlamofireManager.swift */; };
+		87BE705922F9BBB50015157C /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE705822F9BBB50015157C /* UserDataService.swift */; };
+		E3BFB552BC1A880254D2ED03 /* Pods_LufthansaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A90FDD86A6E36921A7D436 /* Pods_LufthansaApp.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		87BE703822F979EA0015157C /* LufthansaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LufthansaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87BE703B22F979EA0015157C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		87BE704222F979EC0015157C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87BE704522F979EC0015157C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87BE704722F979EC0015157C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		87BE704E22F986130015157C /* GetScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleViewController.swift; sourceTree = "<group>"; };
+		87BE705222F9A1210015157C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		87BE705422F9A8310015157C /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
+		87BE705622F9A9F10015157C /* DefaultAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlamofireManager.swift; sourceTree = "<group>"; };
+		87BE705822F9BBB50015157C /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		94D9189C7B4E9986A13CC745 /* Pods-LufthansaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LufthansaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp.debug.xcconfig"; sourceTree = "<group>"; };
+		A8A90FDD86A6E36921A7D436 /* Pods_LufthansaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LufthansaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F37D06A06E53E73D6B83FA08 /* Pods-LufthansaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LufthansaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87BE703522F979EA0015157C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3BFB552BC1A880254D2ED03 /* Pods_LufthansaApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A9D1FA07C5A9B9FF3F96CFF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A8A90FDD86A6E36921A7D436 /* Pods_LufthansaApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		708DB2DA6561A7AE8AF541F8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				94D9189C7B4E9986A13CC745 /* Pods-LufthansaApp.debug.xcconfig */,
+				F37D06A06E53E73D6B83FA08 /* Pods-LufthansaApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		87BE702F22F979EA0015157C = {
+			isa = PBXGroup;
+			children = (
+				87BE703A22F979EA0015157C /* LufthansaApp */,
+				87BE703922F979EA0015157C /* Products */,
+				708DB2DA6561A7AE8AF541F8 /* Pods */,
+				3A9D1FA07C5A9B9FF3F96CFF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		87BE703922F979EA0015157C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87BE703822F979EA0015157C /* LufthansaApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87BE703A22F979EA0015157C /* LufthansaApp */ = {
+			isa = PBXGroup;
+			children = (
+				87BE705122F9A0600015157C /* Networking */,
+				87BE704D22F985ED0015157C /* ViewControllers */,
+				87BE705022F986230015157C /* SupportFiles */,
+				87BE704222F979EC0015157C /* Assets.xcassets */,
+				87BE704422F979EC0015157C /* LaunchScreen.storyboard */,
+				87BE704722F979EC0015157C /* Info.plist */,
+			);
+			path = LufthansaApp;
+			sourceTree = "<group>";
+		};
+		87BE704D22F985ED0015157C /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				87BE704E22F986130015157C /* GetScheduleViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		87BE705022F986230015157C /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				87BE703B22F979EA0015157C /* AppDelegate.swift */,
+				87BE705822F9BBB50015157C /* UserDataService.swift */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		87BE705122F9A0600015157C /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				87BE705222F9A1210015157C /* AuthService.swift */,
+				87BE705422F9A8310015157C /* WebServices.swift */,
+				87BE705622F9A9F10015157C /* DefaultAlamofireManager.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87BE703722F979EA0015157C /* LufthansaApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87BE704A22F979EC0015157C /* Build configuration list for PBXNativeTarget "LufthansaApp" */;
+			buildPhases = (
+				D96783E7DA3134599DF53249 /* [CP] Check Pods Manifest.lock */,
+				87BE703422F979EA0015157C /* Sources */,
+				87BE703522F979EA0015157C /* Frameworks */,
+				87BE703622F979EA0015157C /* Resources */,
+				583B02787F539060BAC77274 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LufthansaApp;
+			productName = LufthansaApp;
+			productReference = 87BE703822F979EA0015157C /* LufthansaApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87BE703022F979EA0015157C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = Grace;
+				TargetAttributes = {
+					87BE703722F979EA0015157C = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 87BE703322F979EA0015157C /* Build configuration list for PBXProject "LufthansaApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87BE702F22F979EA0015157C;
+			productRefGroup = 87BE703922F979EA0015157C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87BE703722F979EA0015157C /* LufthansaApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87BE703622F979EA0015157C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87BE704622F979EC0015157C /* LaunchScreen.storyboard in Resources */,
+				87BE704322F979EC0015157C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		583B02787F539060BAC77274 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D96783E7DA3134599DF53249 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LufthansaApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87BE703422F979EA0015157C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87BE705922F9BBB50015157C /* UserDataService.swift in Sources */,
+				87BE705322F9A1210015157C /* AuthService.swift in Sources */,
+				87BE703C22F979EA0015157C /* AppDelegate.swift in Sources */,
+				87BE705522F9A8310015157C /* WebServices.swift in Sources */,
+				87BE705722F9A9F10015157C /* DefaultAlamofireManager.swift in Sources */,
+				87BE704F22F986130015157C /* GetScheduleViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		87BE704422F979EC0015157C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				87BE704522F979EC0015157C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		87BE704822F979EC0015157C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87BE704922F979EC0015157C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87BE704B22F979EC0015157C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94D9189C7B4E9986A13CC745 /* Pods-LufthansaApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LufthansaApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.njoroge.LufthansaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87BE704C22F979EC0015157C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37D06A06E53E73D6B83FA08 /* Pods-LufthansaApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = LufthansaApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.njoroge.LufthansaApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87BE703322F979EA0015157C /* Build configuration list for PBXProject "LufthansaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87BE704822F979EC0015157C /* Debug */,
+				87BE704922F979EC0015157C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87BE704A22F979EC0015157C /* Build configuration list for PBXNativeTarget "LufthansaApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87BE704B22F979EC0015157C /* Debug */,
+				87BE704C22F979EC0015157C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 87BE703022F979EA0015157C /* Project object */;
+}
