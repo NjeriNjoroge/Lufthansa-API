@@ -15,6 +15,7 @@ let grant_type = "client_credentials"
 
 enum AuthService {
   case getToken
+  case getFlightScedule(origin: String, destination: String, fromDate: String)
 }
 
 extension AuthService: TargetType {
@@ -26,6 +27,8 @@ extension AuthService: TargetType {
     switch self {
     case .getToken:
       return "oauth/token"
+    case .getFlightScedule(let origin, let destination, let fromDate):
+      return "/operations/schedules/\(origin)/\(destination)/\(fromDate)"
     }
   }
   
@@ -53,6 +56,9 @@ extension AuthService: TargetType {
     switch self {
     case .getToken:
       return ["Content-Type": "application/x-www-form-urlencoded"]
+    case .getFlightScedule:
+      return ["Accept": "application/json",
+              "Authorization": "bearer \(UserDataService.shared.token!)"]
     }
   }
   

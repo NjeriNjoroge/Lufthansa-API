@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gwm-vb-mNR">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Get Schedule View Controller-->
+        <scene sceneID="f3B-wU-jIh">
+            <objects>
+                <viewController id="Gwm-vb-mNR" customClass="GetScheduleViewController" customModule="LufthansaApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i9n-GV-bkk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Origin Airport" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wuj-wh-vuF">
+                                <rect key="frame" x="20" y="187" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Rpu-UM-MJV"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NIA-8O-AyH">
+                                <rect key="frame" x="20" y="337" width="374" height="53"/>
+                                <color key="backgroundColor" red="0.41757729683055611" green="0.73401956417420633" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="5PU-5E-KeP"/>
+                                </constraints>
+                                <state key="normal" title="Get Schedule">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="airplane" translatesAutoresizingMaskIntoConstraints="NO" id="LF7-ta-rjP">
+                                <rect key="frame" x="161" y="56" width="96" height="101"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="101" id="C9c-ZR-XdD"/>
+                                    <constraint firstAttribute="width" constant="96" id="alw-cy-uIg"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination Airport" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ojf-nP-F7e">
+                                <rect key="frame" x="20" y="247" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="eaI-Sm-n4f"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="LF7-ta-rjP" firstAttribute="top" secondItem="tgM-qn-CeU" secondAttribute="top" constant="36" id="9jG-zq-V9k"/>
+                            <constraint firstItem="Ojf-nP-F7e" firstAttribute="leading" secondItem="tgM-qn-CeU" secondAttribute="leading" constant="20" id="BW6-8K-FZc"/>
+                            <constraint firstItem="NIA-8O-AyH" firstAttribute="top" secondItem="Ojf-nP-F7e" secondAttribute="bottom" constant="50" id="CTn-Fx-J6e"/>
+                            <constraint firstItem="NIA-8O-AyH" firstAttribute="leading" secondItem="tgM-qn-CeU" secondAttribute="leading" constant="20" id="Gn6-D0-1Ge"/>
+                            <constraint firstItem="Wuj-wh-vuF" firstAttribute="top" secondItem="LF7-ta-rjP" secondAttribute="bottom" constant="30" id="Hyp-Lg-tB4"/>
+                            <constraint firstItem="tgM-qn-CeU" firstAttribute="trailing" secondItem="LF7-ta-rjP" secondAttribute="trailing" constant="157" id="IeT-v9-NEu"/>
+                            <constraint firstItem="tgM-qn-CeU" firstAttribute="trailing" secondItem="Ojf-nP-F7e" secondAttribute="trailing" constant="20" id="T1E-nh-War"/>
+                            <constraint firstItem="Wuj-wh-vuF" firstAttribute="leading" secondItem="tgM-qn-CeU" secondAttribute="leading" constant="20" id="cvW-oZ-b2G"/>
+                            <constraint firstItem="tgM-qn-CeU" firstAttribute="trailing" secondItem="NIA-8O-AyH" secondAttribute="trailing" constant="20" id="fE2-vh-Weo"/>
+                            <constraint firstItem="tgM-qn-CeU" firstAttribute="trailing" secondItem="Wuj-wh-vuF" secondAttribute="trailing" constant="20" id="g6J-My-Z29"/>
+                            <constraint firstItem="Ojf-nP-F7e" firstAttribute="top" secondItem="Wuj-wh-vuF" secondAttribute="bottom" constant="20" id="jNX-qi-CG2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tgM-qn-CeU"/>
+                    </view>
+                    <connections>
+                        <outlet property="finalDestination" destination="Ojf-nP-F7e" id="FRU-UH-SZS"/>
+                        <outlet property="getScheduleButton" destination="NIA-8O-AyH" id="xZX-5t-OsZ"/>
+                        <outlet property="originPoint" destination="Wuj-wh-vuF" id="gAH-fO-3fT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uPC-Q9-fFz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.84057971014494" y="-163.04347826086959"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="airplane" width="256" height="256"/>
+    </resources>
+</document>

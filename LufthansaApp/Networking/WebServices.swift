@@ -31,10 +31,12 @@ public class WebServices {
   }
   
   public static func loginUser(completion: @escaping (JSON?) -> Void) {
-    getToken(completionHandler: completion)
+    getToken { (token) in
+      UserDataService.shared.token = token
+    }
   }
   
-   fileprivate static func getToken(completionHandler: @escaping (JSON?) -> Void) {
+   fileprivate static func getToken(completionHandler: @escaping (String) -> ()) {
     
     let provider = MoyaProvider<AuthService>(endpointClosure: loginEndpointClosure, manager: DefaultAlamofireManager.sharedManager)
     provider.request(.getToken) { (result) in
@@ -45,11 +47,15 @@ public class WebServices {
           print("statuscode catalog \(statuscode)")
           let data = try moyaResponse.mapJSON()
           let json = JSON(data)
-          completionHandler(json)
+          
           // get token
           guard let jsonDict = json.dictionaryObject else {return}
-          let token = jsonDict["access_token"]
-          UserDefaults.standard.set(token, forKey: "AuthToken") //saving to user defaults
+          let token = jsonDict["access_token"] as? String
+          if let token = token {
+             completionHandler(token)
+            UserDataService.shared.token = token
+          }
+          
         } catch {
           
         }
@@ -61,29 +67,20 @@ public class WebServices {
     }
   }
   
-  static func getFlightSchedule(origin: String, dest: String, completion: @escaping _completion) {
+  
+  public static func getFlightSchedule(origin: String, destination: String, fromDate: String, completionHandler: @escaping (JSON?) -> Void) {
+    let requestName = "GetFlightSchedule"
     let provider = MoyaProvider<AuthService>(endpointClosure: loginEndpointClosure, manager: DefaultAlamofireManager.sharedManager)
-    provider.request(.getFlight(origin: origin, destination: dest)) { (result) in
+    provider.request(.getFlightScedule(origin: origin, destination: destination, fromDate: fromDate)) { (result) in
       switch result {
       case let .success(moyaResponse):
-        do {
-          let data = try moyaResponse.mapJSON()
-          let json = JSON(data)
-          
-          debugPrint("getFlightSchedule: \(json)")
-          
-        } catch {
-          let json = JSON("")
-          //completionHandler(json)
-        }
-        
+        print(result)
       case let .failure(error):
-        let json = JSON(error)
-        //completionHandler(json)
-        print(json)
+        print("\(requestName) \(error)")
       }
     }
   }
+ 
   
   
 }

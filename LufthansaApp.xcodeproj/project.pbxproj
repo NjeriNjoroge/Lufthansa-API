@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		876FCDC42313FEEC00BF61E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876FCDC32313FEEC00BF61E2 /* Main.storyboard */; };
+		876FCDCA231405E000BF61E2 /* GetScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876FCDC9231405E000BF61E2 /* GetScheduleView.swift */; };
 		87BE703C22F979EA0015157C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE703B22F979EA0015157C /* AppDelegate.swift */; };
 		87BE704322F979EC0015157C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BE704222F979EC0015157C /* Assets.xcassets */; };
 		87BE704622F979EC0015157C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BE704422F979EC0015157C /* LaunchScreen.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		876FCDC32313FEEC00BF61E2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		876FCDC9231405E000BF61E2 /* GetScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleView.swift; sourceTree = "<group>"; };
 		87BE703822F979EA0015157C /* LufthansaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LufthansaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BE703B22F979EA0015157C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BE704222F979EC0015157C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -63,6 +67,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		876FCDC52313FEF700BF61E2 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				876FCDC32313FEEC00BF61E2 /* Main.storyboard */,
+				87BE704422F979EC0015157C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		876FCDC8231405C000BF61E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				876FCDC9231405E000BF61E2 /* GetScheduleView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		87BE702F22F979EA0015157C = {
 			isa = PBXGroup;
 			children = (
@@ -84,11 +105,12 @@
 		87BE703A22F979EA0015157C /* LufthansaApp */ = {
 			isa = PBXGroup;
 			children = (
+				876FCDC8231405C000BF61E2 /* Views */,
 				87BE705122F9A0600015157C /* Networking */,
 				87BE704D22F985ED0015157C /* ViewControllers */,
 				87BE705022F986230015157C /* SupportFiles */,
+				876FCDC52313FEF700BF61E2 /* Storyboards */,
 				87BE704222F979EC0015157C /* Assets.xcassets */,
-				87BE704422F979EC0015157C /* LaunchScreen.storyboard */,
 				87BE704722F979EC0015157C /* Info.plist */,
 			);
 			path = LufthansaApp;
@@ -181,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				876FCDC42313FEEC00BF61E2 /* Main.storyboard in Resources */,
 				87BE704622F979EC0015157C /* LaunchScreen.storyboard in Resources */,
 				87BE704322F979EC0015157C /* Assets.xcassets in Resources */,
 			);
@@ -243,6 +266,7 @@
 				87BE703C22F979EA0015157C /* AppDelegate.swift in Sources */,
 				87BE705522F9A8310015157C /* WebServices.swift in Sources */,
 				87BE705722F9A9F10015157C /* DefaultAlamofireManager.swift in Sources */,
+				876FCDCA231405E000BF61E2 /* GetScheduleView.swift in Sources */,
 				87BE704F22F986130015157C /* GetScheduleViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,6 +407,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK8U3Q7F56;
 				INFOPLIST_FILE = LufthansaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -401,6 +426,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PK8U3Q7F56;
 				INFOPLIST_FILE = LufthansaApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
