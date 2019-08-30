@@ -68,7 +68,8 @@ class GetScheduleViewController: UIViewController {
   
   @objc fileprivate func doneClick() {
 
-    originAirportPicker.endEditing(true)
+    originPoint.resignFirstResponder()
+    finalDestination.resignFirstResponder()
     
 
   }
