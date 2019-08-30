@@ -10,12 +10,12 @@ import Foundation
 
 class UserDataService {
   
-  /// the singleton
-  static let shared = UserDataService()
-  
   // prevent others from using the default initializer of this class
   private init() {}
   
+  /// the singleton
+  static let shared = UserDataService()
+
   /// the token
   var token: String!
   

@@ -7,20 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		870F9A5023191466001230BA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F9A4F23191466001230BA /* WebService.swift */; };
+		870F9A52231921B2001230BA /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F9A51231921B2001230BA /* Base.swift */; };
 		876FCDC42313FEEC00BF61E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876FCDC32313FEEC00BF61E2 /* Main.storyboard */; };
 		876FCDCA231405E000BF61E2 /* GetScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876FCDC9231405E000BF61E2 /* GetScheduleView.swift */; };
 		87BE703C22F979EA0015157C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE703B22F979EA0015157C /* AppDelegate.swift */; };
 		87BE704322F979EC0015157C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BE704222F979EC0015157C /* Assets.xcassets */; };
 		87BE704622F979EC0015157C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BE704422F979EC0015157C /* LaunchScreen.storyboard */; };
 		87BE704F22F986130015157C /* GetScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE704E22F986130015157C /* GetScheduleViewController.swift */; };
-		87BE705322F9A1210015157C /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE705222F9A1210015157C /* AuthService.swift */; };
-		87BE705522F9A8310015157C /* WebServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE705422F9A8310015157C /* WebServices.swift */; };
-		87BE705722F9A9F10015157C /* DefaultAlamofireManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE705622F9A9F10015157C /* DefaultAlamofireManager.swift */; };
 		87BE705922F9BBB50015157C /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE705822F9BBB50015157C /* UserDataService.swift */; };
+		87FB4B8E231908FF001005B4 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87FB4B8D231908FF001005B4 /* AuthService.swift */; };
 		E3BFB552BC1A880254D2ED03 /* Pods_LufthansaApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8A90FDD86A6E36921A7D436 /* Pods_LufthansaApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		870F9A4F23191466001230BA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		870F9A51231921B2001230BA /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		876FCDC32313FEEC00BF61E2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		876FCDC9231405E000BF61E2 /* GetScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleView.swift; sourceTree = "<group>"; };
 		87BE703822F979EA0015157C /* LufthansaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LufthansaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -29,10 +31,8 @@
 		87BE704522F979EC0015157C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		87BE704722F979EC0015157C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87BE704E22F986130015157C /* GetScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleViewController.swift; sourceTree = "<group>"; };
-		87BE705222F9A1210015157C /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
-		87BE705422F9A8310015157C /* WebServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServices.swift; sourceTree = "<group>"; };
-		87BE705622F9A9F10015157C /* DefaultAlamofireManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAlamofireManager.swift; sourceTree = "<group>"; };
 		87BE705822F9BBB50015157C /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
+		87FB4B8D231908FF001005B4 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		94D9189C7B4E9986A13CC745 /* Pods-LufthansaApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LufthansaApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp.debug.xcconfig"; sourceTree = "<group>"; };
 		A8A90FDD86A6E36921A7D436 /* Pods_LufthansaApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LufthansaApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F37D06A06E53E73D6B83FA08 /* Pods-LufthansaApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LufthansaApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -136,9 +136,9 @@
 		87BE705122F9A0600015157C /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				87BE705222F9A1210015157C /* AuthService.swift */,
-				87BE705422F9A8310015157C /* WebServices.swift */,
-				87BE705622F9A9F10015157C /* DefaultAlamofireManager.swift */,
+				87FB4B8D231908FF001005B4 /* AuthService.swift */,
+				870F9A4F23191466001230BA /* WebService.swift */,
+				870F9A51231921B2001230BA /* Base.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -217,23 +217,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LufthansaApp/Pods-LufthansaApp-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D96783E7DA3134599DF53249 /* [CP] Check Pods Manifest.lock */ = {
@@ -261,13 +254,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				870F9A52231921B2001230BA /* Base.swift in Sources */,
+				870F9A5023191466001230BA /* WebService.swift in Sources */,
 				87BE705922F9BBB50015157C /* UserDataService.swift in Sources */,
-				87BE705322F9A1210015157C /* AuthService.swift in Sources */,
 				87BE703C22F979EA0015157C /* AppDelegate.swift in Sources */,
-				87BE705522F9A8310015157C /* WebServices.swift in Sources */,
-				87BE705722F9A9F10015157C /* DefaultAlamofireManager.swift in Sources */,
 				876FCDCA231405E000BF61E2 /* GetScheduleView.swift in Sources */,
 				87BE704F22F986130015157C /* GetScheduleViewController.swift in Sources */,
+				87FB4B8E231908FF001005B4 /* AuthService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +402,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PK8U3Q7F56;
 				INFOPLIST_FILE = LufthansaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -428,6 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PK8U3Q7F56;
 				INFOPLIST_FILE = LufthansaApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
