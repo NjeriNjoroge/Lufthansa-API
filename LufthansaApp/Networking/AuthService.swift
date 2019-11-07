@@ -9,9 +9,7 @@
 import Foundation
 import Alamofire
 
-let client_id = "e4tvdjjaw2aaarg76y6c6dkn"
-let client_secret = "JsaGVUkfJe"
-let grant_type = "client_credentials"
+
 
 enum Endpoint: URLRequestConvertible {
   
@@ -45,12 +43,12 @@ enum Endpoint: URLRequestConvertible {
     }
   }
   
-  var encoding: ParameterEncoding {
+  var encoding: ParameterEncoder {
     switch self {
     case .getToken:
-      return JSONEncoding.default
+      return JSONParameterEncoder.default
     default:
-      return URLEncoding()
+      return URLEncodedFormParameterEncoder.default
     }
 
   }
@@ -72,6 +70,8 @@ enum Endpoint: URLRequestConvertible {
     //HTTP method
     urlRequest.httpMethod = method.rawValue
     
+  
+    
     //HTTP Headers
     urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
     urlRequest.setValue(ContentType.application.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
@@ -84,7 +84,7 @@ enum Endpoint: URLRequestConvertible {
         throw AFError.parameterEncodingFailed(reason: .jsonEncodingFailed(error: error))
       }
     }
-    print(urlRequest)
+    
     return urlRequest
   }
   

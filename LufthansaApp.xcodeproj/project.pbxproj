@@ -3,14 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		870F9A5023191466001230BA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F9A4F23191466001230BA /* WebService.swift */; };
 		870F9A52231921B2001230BA /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F9A51231921B2001230BA /* Base.swift */; };
+		871B450F2371616500FB3768 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871B450E2371616500FB3768 /* AlertPresenter.swift */; };
+		871B45122371644900FB3768 /* FlightSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871B45112371644900FB3768 /* FlightSchedule.swift */; };
 		876FCDC42313FEEC00BF61E2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 876FCDC32313FEEC00BF61E2 /* Main.storyboard */; };
-		876FCDCA231405E000BF61E2 /* GetScheduleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876FCDC9231405E000BF61E2 /* GetScheduleView.swift */; };
 		87BE703C22F979EA0015157C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87BE703B22F979EA0015157C /* AppDelegate.swift */; };
 		87BE704322F979EC0015157C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87BE704222F979EC0015157C /* Assets.xcassets */; };
 		87BE704622F979EC0015157C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87BE704422F979EC0015157C /* LaunchScreen.storyboard */; };
@@ -23,8 +24,9 @@
 /* Begin PBXFileReference section */
 		870F9A4F23191466001230BA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		870F9A51231921B2001230BA /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
+		871B450E2371616500FB3768 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
+		871B45112371644900FB3768 /* FlightSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSchedule.swift; sourceTree = "<group>"; };
 		876FCDC32313FEEC00BF61E2 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		876FCDC9231405E000BF61E2 /* GetScheduleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleView.swift; sourceTree = "<group>"; };
 		87BE703822F979EA0015157C /* LufthansaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LufthansaApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87BE703B22F979EA0015157C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87BE704222F979EC0015157C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		871B45102371643600FB3768 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				871B45112371644900FB3768 /* FlightSchedule.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		876FCDC52313FEF700BF61E2 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,7 +89,7 @@
 		876FCDC8231405C000BF61E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				876FCDC9231405E000BF61E2 /* GetScheduleView.swift */,
+				871B450E2371616500FB3768 /* AlertPresenter.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,6 +115,7 @@
 		87BE703A22F979EA0015157C /* LufthansaApp */ = {
 			isa = PBXGroup;
 			children = (
+				871B45102371643600FB3768 /* Model */,
 				876FCDC8231405C000BF61E2 /* Views */,
 				87BE705122F9A0600015157C /* Networking */,
 				87BE704D22F985ED0015157C /* ViewControllers */,
@@ -257,10 +268,11 @@
 				870F9A52231921B2001230BA /* Base.swift in Sources */,
 				870F9A5023191466001230BA /* WebService.swift in Sources */,
 				87BE705922F9BBB50015157C /* UserDataService.swift in Sources */,
+				871B45122371644900FB3768 /* FlightSchedule.swift in Sources */,
 				87BE703C22F979EA0015157C /* AppDelegate.swift in Sources */,
-				876FCDCA231405E000BF61E2 /* GetScheduleView.swift in Sources */,
 				87BE704F22F986130015157C /* GetScheduleViewController.swift in Sources */,
 				87FB4B8E231908FF001005B4 /* AuthService.swift in Sources */,
+				871B450F2371616500FB3768 /* AlertPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

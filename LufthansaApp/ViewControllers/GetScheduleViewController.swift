@@ -7,12 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class GetScheduleViewController: UIViewController {
   
   let originAirportPicker = UIPickerView()
   let destinationAirportPicker = UIPickerView()
   let toolBar = UIToolbar() //picker toolbar
+  let dispatchGroup = DispatchGroup()
   
   @IBOutlet weak var originPoint: UITextField!
   @IBOutlet weak var finalDestination: UITextField!
@@ -22,15 +24,22 @@ class GetScheduleViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+   // getToken()
     originAirportPicker.delegate = self
     originAirportPicker.dataSource = self
     destinationAirportPicker.delegate = self
     destinationAirportPicker.dataSource = self
     
-    getScheduleButton.addTarget(self, action: #selector(getToken), for: .touchUpInside)
+    getScheduleButton.addTarget(self, action: #selector(getFlightSchedule), for: .touchUpInside)
   }
   
+  func run(after seaconds: Int, completion: @escaping () -> Void) {
+    let deadline = DispatchTime.now() + .seconds(seaconds)
+    DispatchQueue.main.asyncAfter(deadline: deadline) {
+      completion()
+    }
+  }
+
   override func loadView() {
     super.loadView()
     
@@ -55,23 +64,32 @@ class GetScheduleViewController: UIViewController {
   }
   
   
-  @objc fileprivate func getToken() {
+  @objc fileprivate func getFlightSchedule() {
+    print("started")
+    dispatchGroup.enter()
     WebService.getToken { (token) in
+      UserDataService.shared.token = token
       print(token)
-      self.getFlightSchedule()
     }
+    dispatchGroup.leave()
+    
+    run(after: 2) {
+      self.getToken()
+    }
+    
   }
   
-  func getFlightSchedule() {
-    print("YEAH")
+  func getToken() {
+    print("yay")
+    guard let originAirport = self.originPoint.text else { return }
+    guard let destinationAirport = self.finalDestination.text else { return }
+    WebService.getFlightSchedule(originAirport: originAirport, destinationAirport: destinationAirport, fromDate: "2019-11-26")
   }
   
+  //UIBarButton function
   @objc fileprivate func doneClick() {
-
     originPoint.resignFirstResponder()
     finalDestination.resignFirstResponder()
-    
-
   }
   
 }
