@@ -8,13 +8,17 @@
 
 import Foundation
 import Alamofire
+import SwiftyJSON
 import UIKit
 
 let client_id = "e4tvdjjaw2aaarg76y6c6dkn"
 let client_secret = "JsaGVUkfJe"
 let grant_type = "client_credentials"
 
-class WebService {
+public class WebService {
+  
+  typealias _completion = (JSON?, Error?, Bool) -> Void
+  fileprivate static let isValidDefaultValue: Bool = true
   
   //get token
   static func getToken(completion: @escaping (String) -> ()) {
@@ -61,7 +65,7 @@ class WebService {
   }
 
   //get flight schedule
-  static func getFlightSchedule(originAirport: String, destinationAirport: String, fromDate: String) -> [FlightSchedule] {
+  static func getFlightSchedule(originAirport: String, destinationAirport: String, fromDate: String, completion: @escaping (JSON) -> Void) -> [FlightSchedule] {
     
     let requestName = "GetFlightSchedule"
     var unwrappedAccessToken = ""
@@ -75,12 +79,16 @@ class WebService {
 
          switch response.result {
            
-         case .success(let json):
-           if let response = json as? NSDictionary {
-            let flightData = response.object(forKey: "Schedule") as? [String: Any]
-           }
-          
-          print(response)
+         case .success:
+          do {
+            let jsonData =  try JSON(data: response.data!)
+            completion(jsonData)
+          } catch  {
+            print("Error in catch \(requestName) \(error)")
+          }
+//          let jsonData =  try JSON(data: response.data!)
+
+          print("\(requestName) Success!")
 
       
          case .failure(let error):

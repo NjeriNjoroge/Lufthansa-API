@@ -81,10 +81,22 @@ class GetScheduleViewController: UIViewController {
   
   func getToken() {
     print("yay")
-    guard let originAirport = self.originPoint.text else { return }
-    guard let destinationAirport = self.finalDestination.text else { return }
-    WebService.getFlightSchedule(originAirport: originAirport, destinationAirport: destinationAirport, fromDate: "2019-11-26")
+    guard let pointOfOrigin = self.originPoint.text else { return }
+    guard let arrivalPoint = self.finalDestination.text else { return }
+    WebService.getFlightSchedule(originAirport: pointOfOrigin, destinationAirport: arrivalPoint, fromDate: "2019-11-26") { (json) in
+      let scheduleResource = json["ScheduleResource"]["Schedule"].arrayValue
+      scheduleResource.forEach {
+        let data = $0["Flight"]
+        let departure = data["Departure"]["ScheduledTimeLocal"]["DateTime"].stringValue
+        let arrival = data["Arrival"]["ScheduledTimeLocal"]["DateTime"].stringValue
+        print("flightArrival \(arrival)")
+        print("flightDeparture \(departure)")
+      }
+    }
   }
+  
+
+   
   
   //UIBarButton function
   @objc fileprivate func doneClick() {
