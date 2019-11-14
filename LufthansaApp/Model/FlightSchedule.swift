@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct FlightSchedule {
+struct FlightSchedule: Codable {
   let departureDay: String
   let departureTime: String
   let arrivalTime: String
