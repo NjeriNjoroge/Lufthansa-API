@@ -46,12 +46,8 @@ class DisplayScheduleViewController: UIViewController {
   }
   
   func updateProperties() {
-    //we get the values here how do i update my cell below
-    if let flightDetails = flightDetails {
-      if !cell.flightBla.isEmpty {
-        cell.storeDetails = flightDetails
-      }
-    }
+    //we get the values here
+    //how do i update my cell below
   }
   
   func getFlightSchedule() {
