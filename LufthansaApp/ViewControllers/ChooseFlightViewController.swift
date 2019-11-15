@@ -9,7 +9,7 @@
 import UIKit
 import Alamofire
 
-class GetScheduleViewController: UIViewController {
+class ChooseFlightViewController: UIViewController {
   
   let originAirportPicker = UIPickerView()
   let destinationAirportPicker = UIPickerView()
@@ -24,13 +24,13 @@ class GetScheduleViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-   // getToken()
+
     originAirportPicker.delegate = self
     originAirportPicker.dataSource = self
     destinationAirportPicker.delegate = self
     destinationAirportPicker.dataSource = self
     
-    getScheduleButton.addTarget(self, action: #selector(getFlightSchedule), for: .touchUpInside)
+    getScheduleButton.addTarget(self, action: #selector(getAPIToken), for: .touchUpInside)
   }
   
   func run(after seaconds: Int, completion: @escaping () -> Void) {
@@ -64,7 +64,7 @@ class GetScheduleViewController: UIViewController {
   }
   
   
-  @objc fileprivate func getFlightSchedule() {
+  @objc fileprivate func getAPIToken() {
     print("started")
     dispatchGroup.enter()
     WebService.getToken { (token) in
@@ -73,31 +73,14 @@ class GetScheduleViewController: UIViewController {
     }
     dispatchGroup.leave()
     
-    run(after: 2) {
-      self.getToken()
-    }
+    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    let resultViewController = storyBoard.instantiateViewController(withIdentifier: "DisplayFlights")
     
-  }
-  
-  func getToken() {
-    print("yay")
-    guard let pointOfOrigin = self.originPoint.text else { return }
-    guard let arrivalPoint = self.finalDestination.text else { return }
-    WebService.getFlightSchedule(originAirport: pointOfOrigin, destinationAirport: arrivalPoint, fromDate: "2019-11-26") { (json) in
-      let scheduleResource = json["ScheduleResource"]["Schedule"].arrayValue
-      scheduleResource.forEach {
-        let data = $0["Flight"]
-        let departure = data["Departure"]["ScheduledTimeLocal"]["DateTime"].stringValue
-        let arrival = data["Arrival"]["ScheduledTimeLocal"]["DateTime"].stringValue
-        print("flightArrival \(arrival)")
-        print("flightDeparture \(departure)")
-      }
+    run(after: 2) {
+      self.navigationController?.pushViewController(resultViewController, animated: true)
     }
   }
-  
 
-   
-  
   //UIBarButton function
   @objc fileprivate func doneClick() {
     originPoint.resignFirstResponder()
@@ -106,7 +89,7 @@ class GetScheduleViewController: UIViewController {
   
 }
 
-extension GetScheduleViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+extension ChooseFlightViewController: UIPickerViewDataSource, UIPickerViewDelegate {
   
   func numberOfComponents(in pickerView: UIPickerView) -> Int {
     return 1

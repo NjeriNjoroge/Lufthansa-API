@@ -65,7 +65,7 @@ public class WebService {
   }
 
   //get flight schedule
-  static func getFlightSchedule(originAirport: String, destinationAirport: String, fromDate: String, completion: @escaping (JSON) -> Void) -> [FlightSchedule] {
+  static func getFlightSchedule(originAirport: String, destinationAirport: String, fromDate: String, completion: @escaping (JSON) -> Void) {
     
     let requestName = "GetFlightSchedule"
     var unwrappedAccessToken = ""
@@ -108,8 +108,7 @@ public class WebService {
          }
 
     }
-    
-    return []
+
   }
   
 }
