@@ -10,6 +10,5 @@ import Foundation
 
 struct FlightSchedule: Codable {
   let departureDay: String
-  let departureTime: String
   let arrivalTime: String
 }

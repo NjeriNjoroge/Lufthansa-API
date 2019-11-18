@@ -11,6 +11,8 @@ import SwiftyJSON
 
 public class Parse {
   
+  var flight = [FlightSchedule]()
+  
   static func parseFlightSchedule(json: JSON) -> [FlightSchedule] {
     
     var results = [FlightSchedule]()
@@ -22,7 +24,7 @@ public class Parse {
       let arrival = data["Arrival"]["ScheduledTimeLocal"]["DateTime"].string ?? ""
       print("flightArrival \(arrival)")
       print("flightDeparture \(departure)")
-      let flightScheduleObject = FlightSchedule(departureDay: departure, departureTime: departure, arrivalTime: arrival)
+      let flightScheduleObject = FlightSchedule(departureDay: departure, arrivalTime: arrival)
       results.append(flightScheduleObject)
     }
     

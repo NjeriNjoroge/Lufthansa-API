@@ -10,9 +10,12 @@ import UIKit
 
 class DisplayScheduleViewController: UIViewController {
   
+  @IBOutlet weak private var activityIndicator: UIActivityIndicatorView!
+  
   let myTableView = UITableView()
   let cell = CustomTableViewCell()
   var flight = [FlightSchedule]()
+  var resultFlight = [FlightSchedule]()
   let myCellId = "cellId"
   
   var flightDetails: FlightSchedule? {
@@ -24,8 +27,10 @@ class DisplayScheduleViewController: UIViewController {
   override func viewDidLoad() {
         super.viewDidLoad()
 
-        setupTableView()
-        getFlightSchedule()
+      setupTableView()
+      getFlightSchedule { (json) in
+        debugPrint("results")
+      }
     }
   
   func setupTableView() {
@@ -47,31 +52,60 @@ class DisplayScheduleViewController: UIViewController {
   
   func updateProperties() {
     //we get the values here
-    //how do i update my cell below
+    myTableView.reloadData()
   }
   
-  func getFlightSchedule() {
+  func getFlightSchedule(completionHandler: @escaping ([FlightSchedule]) -> Void) {
+    createSpinnerView()
     WebService.getFlightSchedule(originAirport: "LAX", destinationAirport: "ATL", fromDate: "2019-11-26") { (json) in
       if json.stringValue != "error" {
         let results = Parse.parseFlightSchedule(json: json)
         if !results.isEmpty {
           self.flightDetails = results[0]
         }
+        for all in results {
+          self.flight.append(all)
+        }
+        self.resultFlight += self.flight
+        self.myTableView.reloadData()
+        completionHandler(results)
       }
     }
+  }
+  
+  func createSpinnerView() {
+    let spinner = SpinnerViewController()
+    let child = SpinnerViewController()
+
+      // add the spinner view controller
+      addChild(child)
+      child.view.frame = view.frame
+      view.addSubview(child.view)
+      child.didMove(toParent: self)
+    
+    // wait two seconds to simulate some work happening
+       DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
+           // then remove the spinner view controller
+           child.willMove(toParent: nil)
+           child.view.removeFromSuperview()
+           child.removeFromParent()
+       }
   }
 }
 
 extension DisplayScheduleViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+      return resultFlight.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = myTableView.dequeueReusableCell(withIdentifier: myCellId, for: indexPath) as! CustomTableViewCell
+      
+      if resultFlight.count > 0 {
+        cell.arriveTimeLabel.text = "Arrive: \(resultFlight[indexPath.row].arrivalTime)"
+        cell.departureTimeLabel.text = "Departure: \(resultFlight[indexPath.row].departureDay)"
+      }
         
-     // cell.arriveTimeLabel.text = flight[indexPath.row].arrivalTime
-  
         return cell
     }
   

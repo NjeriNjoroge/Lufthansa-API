@@ -10,6 +10,7 @@
 		870F9A5023191466001230BA /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F9A4F23191466001230BA /* WebService.swift */; };
 		871B450F2371616500FB3768 /* AlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871B450E2371616500FB3768 /* AlertPresenter.swift */; };
 		871B45122371644900FB3768 /* FlightSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871B45112371644900FB3768 /* FlightSchedule.swift */; };
+		871D311C2382C249009FB54A /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 871D311B2382C249009FB54A /* SpinnerViewController.swift */; };
 		872BF0AD237D4749008DF9E7 /* DisplayScheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872BF0AC237D4749008DF9E7 /* DisplayScheduleViewController.swift */; };
 		872BF0AF237D47BE008DF9E7 /* Parse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872BF0AE237D47BE008DF9E7 /* Parse.swift */; };
 		872BF0B1237D7371008DF9E7 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872BF0B0237D7371008DF9E7 /* CustomTableViewCell.swift */; };
@@ -26,6 +27,7 @@
 		870F9A4F23191466001230BA /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		871B450E2371616500FB3768 /* AlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertPresenter.swift; sourceTree = "<group>"; };
 		871B45112371644900FB3768 /* FlightSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlightSchedule.swift; sourceTree = "<group>"; };
+		871D311B2382C249009FB54A /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		872BF0AC237D4749008DF9E7 /* DisplayScheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayScheduleViewController.swift; sourceTree = "<group>"; };
 		872BF0AE237D47BE008DF9E7 /* Parse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parse.swift; sourceTree = "<group>"; };
 		872BF0B0237D7371008DF9E7 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				87BE704E22F986130015157C /* ChooseFlightViewController.swift */,
 				872BF0AC237D4749008DF9E7 /* DisplayScheduleViewController.swift */,
 				872BF0B0237D7371008DF9E7 /* CustomTableViewCell.swift */,
+				871D311B2382C249009FB54A /* SpinnerViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				870F9A5023191466001230BA /* WebService.swift in Sources */,
 				872BF0AF237D47BE008DF9E7 /* Parse.swift in Sources */,
 				87BE705922F9BBB50015157C /* UserDataService.swift in Sources */,
+				871D311C2382C249009FB54A /* SpinnerViewController.swift in Sources */,
 				871B45122371644900FB3768 /* FlightSchedule.swift in Sources */,
 				87BE703C22F979EA0015157C /* AppDelegate.swift in Sources */,
 				87BE704F22F986130015157C /* ChooseFlightViewController.swift in Sources */,

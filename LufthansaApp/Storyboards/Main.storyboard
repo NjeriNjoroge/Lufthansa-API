@@ -84,7 +84,16 @@
                     <view key="view" contentMode="scaleToFill" id="PLM-Cf-f1E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ICT-Dz-OPP">
+                                <rect key="frame" x="188.66666666666666" y="349.66666666666669" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ICT-Dz-OPP" firstAttribute="centerY" secondItem="SWZ-hi-3mC" secondAttribute="centerY" id="ga5-h1-EvR"/>
+                            <constraint firstItem="ICT-Dz-OPP" firstAttribute="centerX" secondItem="SWZ-hi-3mC" secondAttribute="centerX" id="nW8-LN-eRA"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="SWZ-hi-3mC"/>
                     </view>
                 </viewController>
